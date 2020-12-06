@@ -75,9 +75,10 @@ jobs:
           cat >> .config <<EOF
           CONFIG_TARGET_ramips=y
           CONFIG_TARGET_ramips_mt7621=y
-          CONFIG_TARGET_ramips_mt7621_DEVICE_newifi-d2=y
+          CONFIG_TARGET_ramips_mt7621_DEVICE_d-team_newifi-d2=y
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
+          CONFIG_PACKAGE_curl=y
           CONFIG_PACKAGE_kmod-usb-ohci=y
           CONFIG_PACKAGE_kmod-usb-ohci-pci=y
           CONFIG_PACKAGE_kmod-usb2=y
@@ -86,8 +87,11 @@ jobs:
           CONFIG_PACKAGE_luci-app-zerotier=y
           CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y          
           CONFIG_PACKAGE_luci-theme-netgear=y
-          CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
-          CONFIG_KERNEL_BUILD_DOMAIN="Azure"
+          # CONFIG_BUSYBOX_DEFAULT_FEATURE_IPV6 is not set
+          # CONFIG_IPV6 is not set
+          # CONFIG_KERNEL_IPV6 is not set
+          # CONFIG_TARGET_IMAGES_PAD is not set
+          # CONFIG_VMDK_IMAGES is not set
           EOF
 
           #
