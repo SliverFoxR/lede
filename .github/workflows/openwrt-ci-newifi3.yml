@@ -164,7 +164,6 @@ jobs:
 
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
-
      - name: Make download
         run: |
           make download -j8 || make download -j1 V=s
